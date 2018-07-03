@@ -3,12 +3,16 @@
   <head>
     <title>Dance</title>
     <%= csrf_meta_tags %>
-
+    <link rel="shortcut icon" type="image/png" href="http://devitems.com/html/disco-preview/disco/img/favicon.png">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#scroll-menu" data-offset="65">
+  	<%= render 'layouts/header' %>
+  	<div class="blog-area inner-padding4" style="margin-top: 100px;">
     <%= yield %>
+	</div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
